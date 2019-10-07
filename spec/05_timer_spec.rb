@@ -4,7 +4,6 @@ describe 'time_string' do
   it "should display 0 seconds as 00:00:00" do
     expect(time_string(0)).to eq("00:00:00")
   end
-
   it "should display 12 seconds as 00:00:12" do
     expect(time_string1(12)).to eq("00:00:12")
   end
