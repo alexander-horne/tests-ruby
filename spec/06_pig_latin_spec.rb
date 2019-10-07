@@ -8,41 +8,41 @@ describe "#translate" do
   end
 
   it "translates a word beginning with a consonant" do
-    s = translate("banana")
+    s = translate1("banana")
     expect(s).to eq("ananabay")
   end
 
   it "translates a word beginning with two consonants" do
-    s = translate("cherry")
+    s = translate2("cherry")
     expect(s).to eq("errychay")
   end
 
   it "translates two words" do
-    s = translate("eat pie")
+    s = translate3("eat pie")
     expect(s).to eq("eatay iepay")
   end
 
   it "translates a word beginning with three consonants" do
-    expect(translate("three")).to eq("eethray")
+    expect(translate4("three")).to eq("eethray")
   end
 
   it "counts 'sch' as a single phoneme" do
-    s = translate("school")
+    s = translate5("school")
     expect(s).to eq("oolschay")
   end
 
   it "counts 'qu' as a single phoneme" do
-    s = translate("quiet")
+    s = translate6("quiet")
     expect(s).to eq("ietquay")
   end
 
   it "counts 'qu' as a consonant even when it's preceded by a consonant" do
-    s = translate("square")
+    s = translate7("square")
     expect(s).to eq("aresquay")
   end
 
   it "translates many words" do
-    s = translate("the quick brown fox")
+    s = translate8("the quick brown fox")
     expect(s).to eq("ethay ickquay ownbray oxfay")
   end
 

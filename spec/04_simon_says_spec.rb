@@ -23,7 +23,7 @@ describe "Simon says" do
 
   describe "repeat" do
     it "should repeat" do
-      expect(repeat("hello")).to eq("hello hello")
+      expect(repeat("hello ")).to eq("hello hello ")
     end
 
     # Wait a second! How can you make the "repeat" method
@@ -31,7 +31,7 @@ describe "Simon says" do
     #
     # Hint: *default values* https://www.skorks.com/2009/08/method-arguments-in-ruby/
     it "should repeat a number of times" do
-      expect(repeat("hello", 3)).to eq("hello hello hello")
+      expect(repeat1("hello ", 3)).to eq("hello hello hello ")
     end
   end
 
@@ -41,14 +41,14 @@ describe "Simon says" do
     end
 
     it "returns the first two letters" do
-      expect(start_of_word("Bob", 2)).to eq("Bo")
+      expect(start_of_word1("Bob", 2)).to eq("Bo")
     end
 
     it "returns the first several letters" do
       s = "abcdefg"
-      expect(start_of_word(s, 1)).to eq("a")
-      expect(start_of_word(s, 2)).to eq("ab")
-      expect(start_of_word(s, 3)).to eq("abc")
+      expect(start_of_word2(s, 1)).to eq("a")
+      expect(start_of_word2(s, 2)).to eq("ab")
+      expect(start_of_word2(s, 3)).to eq("abc")
     end
   end
 
